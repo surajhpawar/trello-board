@@ -2,3 +2,24 @@
   display: flex;
   flex-direction: row;
 }
+
+.sub-heading{
+	padding: 5px;
+	.board-name {
+		width: 9em;
+		color: #fff;
+	}
+}
+
+.board-item {
+	color: #fff;
+	background-color: #dddddd32;
+
+	&:hover{
+		background-color: #ffffff52;
+	}
+	.show-menu-icon{
+		margin-top: -4px;
+		padding: 0 5px;
+	}
+}

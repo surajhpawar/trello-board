@@ -1,21 +1,30 @@
-<div class="w-100">
-	<div class="menu d-flex justify-space-between">
-		<div class="d-flex">
-			<a href="/"
-				 class="menu-link">Home</a>
-			<a href="/"
-				 class="menu-link">Tour</a>
-			<a href="https://blog.trello.com"
-				 class="menu-link">Blog</a>
-		</div>
-		<div class="title d-flex align-center font-lg font-bold">
-			{{title | titlecase}}
-		</div>
-		<div class="d-flex"><a href="/"
-				 class="menu-link sign-up">Sign up</a>
-			<a href="/"
-				 class="menu-link log-in">Log in</a>
-		</div>
+<div class="menu d-flex justify-space-between">
+	<div class="d-flex">
+		<a href="/"
+			 class="menu-link">Home</a>
+		<a href="/"
+			 class="menu-link">Tour</a>
+		<a href="https://blog.trello.com"
+			 class="menu-link">Blog</a>
 	</div>
+	<div class="title d-flex align-center font-lg font-bold">
+		<img src="../../../assets/images/logo.png"
+				 height="25">{{title | titlecase}}
+	</div>
+	<div class="d-flex"><a href="/"
+			 class="menu-link sign-up">Sign up</a>
+		<a href="/"
+			 class="menu-link log-in">Log in</a>
+	</div>
+</div>
+<div class="sign-up-notification d-flex justify-center align-center">
+	<span>Visually collaborate with anyone, anywhere.
+	</span>
+	<button mat-raised-button
+					class="sign-up-button">
+		Sign Up for Free
+	</button>
+</div>
+<div class="w-100 main-content">
 	<router-outlet></router-outlet>
 </div>
