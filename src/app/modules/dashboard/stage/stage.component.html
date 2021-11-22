@@ -1,0 +1,8 @@
+<div class='stage'>
+	<h2 class='header'>{{ stage.name }}</h2>
+	<div class='card_container'>
+		<app-card *ngFor="let card of stage.cards"
+							[card]='card'>
+		</app-card>
+	</div>
+</div>

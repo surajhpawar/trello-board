@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('./assets/styles/util.scss');
+
+html, body {
+	height: 100%;
+	background-color: #f4f5f7;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+
+}
+
+* {
+	font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	color: #333333;
+}
+
+.mat-snack-bar-container {
+	background-color: #F8F7FF;
+	border: 1px solid #5E56E7;
+}

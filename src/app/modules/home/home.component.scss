@@ -1,0 +1,31 @@
+.menu {
+	padding: 4px;
+	background-color: #026AA7;
+	.title {
+		color: white;
+		opacity: 0.5;
+
+		&:hover{
+			opacity: 0.9;
+		};
+	}
+	.menu-link {
+		border-radius: 3px;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin: 0 4px 0 0;
+    padding: 8px;
+    text-decoration: none;
+
+		&.sign-up{
+			background-color: #61BD4F;
+		}
+		&.log-in{
+			background-color: #0489d6;
+		}
+
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+	}
+}
