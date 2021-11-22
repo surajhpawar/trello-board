@@ -1,0 +1,32 @@
+<div class="dialog-container">
+	<div class="dialog-panel">
+		<div class="dialog-body">
+			<div class="d-flex justify-space-between align-center">
+				<div class="font-medium font-bold">
+					Add New {{type}}
+				</div>
+				<mat-icon class="cursor-pointer"
+									(click)="onDialogClose()">
+					close
+				</mat-icon>
+			</div>
+			<form [formGroup]="formGroup"
+						class="form-panel">
+				<mat-form-field class="w-100">
+					<input matInput
+								 placeholder="Name"
+								 formControlName="name">
+				</mat-form-field>
+
+			</form>
+			<div class="d-flex justify-center">
+				<button mat-raised-button
+								color="primary"
+								(click)="onAdd()">
+					Add {{type}}
+				</button>
+			</div>
+
+		</div>
+	</div>
+</div>

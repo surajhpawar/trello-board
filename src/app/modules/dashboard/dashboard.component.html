@@ -36,6 +36,7 @@
 										(click)="clearSearch()"> clear </mat-icon>
 				</div>
 				<button mat-raised-button
+								(click)="drawer.toggle()"
 								class="board-item show-menu-button">
 					<span class="show-menu-icon">...</span>
 					Show menu
@@ -44,29 +45,75 @@
 		</div>
 	</div>
 
-	<div class="stage_container"
-			 cdkDropListGroup>
-		<div *ngFor="let listElement of lists">
-			<div class="list"
-					 cdkDropList
-					 [cdkDropListData]="listElement.cards"
-					 (cdkDropListDropped)="drop($event)">
-				<div class="header font-md font-bold d-flex align-center justify-space-between">
-					<span>{{ listElement.name }}</span>
-					<button mat-icon-button
-									title="Add New Card"
-									(click)="onAddCard(listElement)"
-									color="primary"
-									class="add-action">
-						<mat-icon>add</mat-icon>
-					</button>
-				</div>
-				<div class="card_container">
-					<app-card *ngFor="let card of listElement.filteredCards"
-										[card]="card"
-										cdkDrag>
-					</app-card>
+	<mat-drawer-container class="sidenav-container"
+												autosize
+												[hasBackdrop]="false">
+		<div class="sidenav-content">
+			<div class="lists_container"
+					 cdkDropListGroup>
+				<div *ngFor="let listElement of lists">
+					<div class="list"
+							 cdkDropList
+							 [cdkDropListData]="listElement.cards"
+							 (cdkDropListDropped)="drop($event)">
+						<div class="header font-md font-bold d-flex align-center justify-space-between">
+							<span>{{ listElement.name }}</span>
+							<div class="d-flex">
+								<button mat-icon-button
+												title="Add New Card"
+												(click)="onAddCard(listElement)"
+												color="primary"
+												class="add-action">
+									<mat-icon>add</mat-icon>
+								</button>
+								<button mat-icon-button
+												title="Delete list"
+												(click)="onDeleteList(listElement)"
+												color="primary"
+												class="add-action">
+									<mat-icon>delete</mat-icon>
+								</button>
+							</div>
+						</div>
+						<div class="card_container">
+							<app-card *ngFor="let card of listElement.filteredCards"
+												[card]="card"
+												cdkDrag>
+							</app-card>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+		<mat-drawer #drawer
+								class="sidenav"
+								position="end"
+								mode="over">
+			<div class="d-flex justify-space-between align-center">
+				<div class="font-medium font-bold">
+					Logs
+				</div>
+				<mat-icon class="cursor-pointer"
+									(click)="drawer.toggle()">
+					close
+				</mat-icon>
+			</div>
+			<div *ngFor="let log of logs"
+					 class="font-sm log-item">
+				<div class="d-flex justify-space-between font-bold">
+					<span>Author: {{log.name}}</span>
+					<span>Time: {{log.time}}</span>
+				</div>
+				<div class="d-flex">
+					{{log.comment}}
+				</div>
+			</div>
+		</mat-drawer>
+	</mat-drawer-container>
+</div>
+<ng-container *ngIf="showAddDialog">
+	<app-add-data (addValue)="onSave($event)"
+								[type]="type"
+								(onDialogClosed)="closeDialog($event)">
+	</app-add-data>
+</ng-container>

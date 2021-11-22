@@ -2,15 +2,15 @@ export let LISTS = [{
 	id: 1,
 	name: 'Backlog',
 	cards: [{
-		id: 123,
+		id: 11,
 		name: 'test backlog'
 	},
 	{
-		id: 2,
+		id: 12,
 		name: 'test backlog 2'
 	},
 	{
-		id: 3,
+		id: 13,
 		name: 'test backlog 3'
 	}],
 	filteredCards: []
@@ -23,7 +23,7 @@ export let LISTS = [{
 	name: 'Ongoing',
 	cards: [
 		{
-			id: 123,
+			id: 31,
 			name: 'test ongoing'
 		}
 	],
@@ -32,7 +32,7 @@ export let LISTS = [{
 	id: 4,
 	name: 'Done',
 	cards: [{
-		id: 123,
+		id: 41,
 		name: 'test Done'
 	}],
 	filteredCards: []
