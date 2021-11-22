@@ -4,20 +4,28 @@
 }
 
 .sub-heading{
-	padding: 5px;
 	.board-name {
+		padding-left: 1em;
 		width: 9em;
 		color: #fff;
 	}
 }
 
-.board-item {
+.board-action-menu{
+	padding-top: 8px;
+}
+
+button.board-item{
 	color: #fff;
 	background-color: #dddddd32;
-
 	&:hover{
 		background-color: #ffffff52;
 	}
+}
+
+.show-menu-button{
+	margin-right: 0.5em;
+
 	.show-menu-icon{
 		margin-top: -4px;
 		padding: 0 5px;

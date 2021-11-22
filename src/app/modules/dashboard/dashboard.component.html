@@ -2,7 +2,7 @@
 	<div class="d-flex align-center">
 		<div class="font-bold font-md board-name">Kanban Board
 		</div>
-		<div class="d-flex justify-space-between w-100">
+		<div class="d-flex justify-space-between w-100 board-action-menu">
 			<div class="d-flex">
 				<button mat-button
 								class="board-item">
@@ -16,8 +16,9 @@
 							 src="https://trello-members.s3.amazonaws.com/58b45e07a465b40ffcc8bbb9/08f267e86ed6d072678cfc98bacbb596/30.png">
 				</button>
 			</div>
-			<div class="board-item d-flex">
-				<button mat-button>
+			<div class="d-flex">
+				<button mat-button
+								class="board-item show-menu-button">
 					<span class="show-menu-icon">...</span>
 					Show menu
 				</button>
@@ -25,8 +26,9 @@
 		</div>
 	</div>
 
-
-	<div class='stage_container'>
-		<app-stage *ngFor="let stage of stages"
-							 [stage]='stage'></app-stage>
+	<div class="stage_container"
+			 cdkDropListGroup>
+		<div *ngFor="let listElement of lists">
+			<app-list [list]="listElement"></app-list>
+		</div>
 	</div>

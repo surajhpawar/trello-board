@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Card } from 'src/app/shared/models/card.model';
 
 @Component({
 	selector: 'app-card',
@@ -6,15 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
 	styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-	@Input() card: object;
+	@Input() card: Card;
 
 	constructor() {
 	}
 
 	ngOnInit() {
-	}
-
-	onCardSelect(id) {
-		console.log(id);
 	}
 }
