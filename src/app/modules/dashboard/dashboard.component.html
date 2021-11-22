@@ -47,6 +47,26 @@
 	<div class="stage_container"
 			 cdkDropListGroup>
 		<div *ngFor="let listElement of lists">
-			<app-list [list]="listElement"></app-list>
+			<div class="list"
+					 cdkDropList
+					 [cdkDropListData]="listElement.cards"
+					 (cdkDropListDropped)="drop($event)">
+				<div class="header font-md font-bold d-flex align-center justify-space-between">
+					<span>{{ listElement.name }}</span>
+					<button mat-icon-button
+									title="Add New Card"
+									(click)="onAddCard(listElement)"
+									color="primary"
+									class="add-action">
+						<mat-icon>add</mat-icon>
+					</button>
+				</div>
+				<div class="card_container">
+					<app-card *ngFor="let card of listElement.filteredCards"
+										[card]="card"
+										cdkDrag>
+					</app-card>
+				</div>
+			</div>
 		</div>
 	</div>

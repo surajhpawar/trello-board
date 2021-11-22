@@ -13,6 +13,7 @@ export let LISTS = [{
 		id: 3,
 		name: 'test backlog 3'
 	}],
+	filteredCards: []
 }, {
 	id: 2,
 	name: 'To Do',
@@ -26,6 +27,7 @@ export let LISTS = [{
 			name: 'test ongoing'
 		}
 	],
+	filteredCards: []
 }, {
 	id: 4,
 	name: 'Done',
@@ -33,4 +35,5 @@ export let LISTS = [{
 		id: 123,
 		name: 'test Done'
 	}],
+	filteredCards: []
 }];

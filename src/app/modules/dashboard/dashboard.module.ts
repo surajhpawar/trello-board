@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardComponent } from './card/card.component';
-import { ListComponent } from './list/list.component';
 import { DashboardComponent } from './dashboard.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardRoutingModule } from './dashboard.routing.module';
@@ -19,6 +18,6 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 		DashboardRoutingModule
 	],
 	exports: [DashboardComponent],
-	declarations: [DashboardComponent, CardComponent, ListComponent]
+	declarations: [DashboardComponent, CardComponent]
 })
 export class DashboardModule { }
