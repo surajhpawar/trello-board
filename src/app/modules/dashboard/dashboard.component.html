@@ -4,7 +4,7 @@
 		</div>
 		<div class="d-flex justify-space-between w-100 board-action-menu">
 			<div class="d-flex">
-				<button mat-button
+				<button mat-raised-button
 								class="board-item">
 					<mat-icon inline>public</mat-icon>
 					Public
@@ -15,9 +15,27 @@
 							 width="30"
 							 src="https://trello-members.s3.amazonaws.com/58b45e07a465b40ffcc8bbb9/08f267e86ed6d072678cfc98bacbb596/30.png">
 				</button>
+				<button mat-raised-button
+								class="board-item"
+								(click)="onAddList()">
+					<mat-icon inline>add</mat-icon>
+					Add List
+				</button>
 			</div>
 			<div class="d-flex">
-				<button mat-button
+				<div class="search-field d-inline-flex align-center"
+						 [ngClass]="{'ng-dirty': searchText?.length}">
+					<mat-icon>search</mat-icon>
+					<input matInput
+								 type="text"
+								 placeholder="Search"
+								 [(ngModel)]="searchText"
+								 (keyup)="searchChange()"
+								 class="font-md">
+					<mat-icon *ngIf="searchText"
+										(click)="clearSearch()"> clear </mat-icon>
+				</div>
+				<button mat-raised-button
 								class="board-item show-menu-button">
 					<span class="show-menu-icon">...</span>
 					Show menu

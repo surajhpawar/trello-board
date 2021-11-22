@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { List } from 'src/app/shared/models/list.model';
 
 @Component({
 	selector: 'app-list',
@@ -8,7 +9,7 @@ import { moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 })
 export class ListComponent implements OnInit {
 
-	@Input() list: any;
+	@Input() list: List;
 
 	constructor() { }
 
@@ -24,5 +25,9 @@ export class ListComponent implements OnInit {
 				event.previousIndex,
 				event.currentIndex);
 		}
+	}
+
+	onAddCard(list: List): void {
+		console.log('add card', list);
 	}
 }

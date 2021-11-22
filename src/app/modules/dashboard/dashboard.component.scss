@@ -31,3 +31,28 @@ button.board-item{
 		padding: 0 5px;
 	}
 }
+
+.search-field{
+	background-color: #c0bfbf52;
+	margin: 0 10px;
+	padding: 0 5px;
+	border-radius: 4px;
+
+	.mat-icon{
+		color: white;
+	}
+
+	input {
+		background-color: #6488a552;
+		color: white;
+		border: none;
+		margin: 0 5px;
+		&:focus{
+				outline: none;
+			}
+
+		&::placeholder {
+			color: rgb(197, 197, 197);
+		}
+	}
+}

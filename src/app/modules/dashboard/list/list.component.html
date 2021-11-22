@@ -2,7 +2,16 @@
 		 cdkDropList
 		 [cdkDropListData]="list.cards"
 		 (cdkDropListDropped)="drop($event)">
-	<div class="header font-md font-bold">{{ list.name }}</div>
+	<div class="header font-md font-bold d-flex align-center justify-space-between">
+		<span>{{ list.name }}</span>
+		<button mat-icon-button
+						title="Add New Card"
+						(click)="onAddCard(list)"
+						color="primary"
+						class="add-action">
+			<mat-icon>add</mat-icon>
+		</button>
+	</div>
 	<div class="card_container">
 		<app-card *ngFor="let card of list.cards"
 							[card]="card"
