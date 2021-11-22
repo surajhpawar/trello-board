@@ -10,7 +10,6 @@ Problem statement - Build web app as per given design and display data as per gi
 2. Run npm install in root folder
 3. Run `ng serve` to start application
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
+## Demo Screenshot
+![Selection_697](https://user-images.githubusercontent.com/15173586/142855738-e7f3ccd5-5649-459a-9022-552505159f49.png)
+![image](https://user-images.githubusercontent.com/15173586/142855833-32e0951b-d5c6-4074-86bf-b60e1447722d.png)
